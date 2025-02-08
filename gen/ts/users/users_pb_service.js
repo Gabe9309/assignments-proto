@@ -1,7 +1,7 @@
 // package: users
-// file: user.proto
+// file: users/users.proto
 
-var user_pb = require("./user_pb");
+var users_users_pb = require("../users/users_pb");
 var grpc = require("@improbable-eng/grpc-web").grpc;
 
 var UserRegService = (function () {
@@ -15,8 +15,8 @@ UserRegService.Signup = {
   service: UserRegService,
   requestStream: false,
   responseStream: false,
-  requestType: user_pb.SignupRequest,
-  responseType: user_pb.SignupResponse
+  requestType: users_users_pb.SignupRequest,
+  responseType: users_users_pb.SignupResponse
 };
 
 UserRegService.Login = {
@@ -24,8 +24,8 @@ UserRegService.Login = {
   service: UserRegService,
   requestStream: false,
   responseStream: false,
-  requestType: user_pb.LoginRequest,
-  responseType: user_pb.LoginResponse
+  requestType: users_users_pb.LoginRequest,
+  responseType: users_users_pb.LoginResponse
 };
 
 exports.UserRegService = UserRegService;
@@ -110,8 +110,8 @@ UserService.GetUser = {
   service: UserService,
   requestStream: false,
   responseStream: false,
-  requestType: user_pb.GetUserRequest,
-  responseType: user_pb.GetUserResponse
+  requestType: users_users_pb.GetUserRequest,
+  responseType: users_users_pb.GetUserResponse
 };
 
 UserService.UpdateUser = {
@@ -119,8 +119,8 @@ UserService.UpdateUser = {
   service: UserService,
   requestStream: false,
   responseStream: false,
-  requestType: user_pb.UpdateUserRequest,
-  responseType: user_pb.UpdateUserResponse
+  requestType: users_users_pb.UpdateUserRequest,
+  responseType: users_users_pb.UpdateUserResponse
 };
 
 UserService.DeleteUser = {
@@ -128,8 +128,8 @@ UserService.DeleteUser = {
   service: UserService,
   requestStream: false,
   responseStream: false,
-  requestType: user_pb.DeleteUserRequest,
-  responseType: user_pb.DeleteUserResponse
+  requestType: users_users_pb.DeleteUserRequest,
+  responseType: users_users_pb.DeleteUserResponse
 };
 
 exports.UserService = UserService;

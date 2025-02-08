@@ -1,7 +1,7 @@
 // package: news
-// file: news.proto
+// file: news/news.proto
 
-import * as news_pb from "./news_pb";
+import * as news_news_pb from "../news/news_pb";
 import {grpc} from "@improbable-eng/grpc-web";
 
 type NewsServiceGetNewsFeed = {
@@ -9,8 +9,8 @@ type NewsServiceGetNewsFeed = {
   readonly service: typeof NewsService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof news_pb.NewsRequest;
-  readonly responseType: typeof news_pb.NewsResponse;
+  readonly requestType: typeof news_news_pb.NewsRequest;
+  readonly responseType: typeof news_news_pb.NewsResponse;
 };
 
 type NewsServiceListSections = {
@@ -18,8 +18,8 @@ type NewsServiceListSections = {
   readonly service: typeof NewsService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof news_pb.ListSectionsRequest;
-  readonly responseType: typeof news_pb.SectionListResponse;
+  readonly requestType: typeof news_news_pb.ListSectionsRequest;
+  readonly responseType: typeof news_news_pb.SectionListResponse;
 };
 
 export class NewsService {
@@ -61,22 +61,22 @@ export class NewsServiceClient {
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);
   getNewsFeed(
-    requestMessage: news_pb.NewsRequest,
+    requestMessage: news_news_pb.NewsRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: news_pb.NewsResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: news_news_pb.NewsResponse|null) => void
   ): UnaryResponse;
   getNewsFeed(
-    requestMessage: news_pb.NewsRequest,
-    callback: (error: ServiceError|null, responseMessage: news_pb.NewsResponse|null) => void
+    requestMessage: news_news_pb.NewsRequest,
+    callback: (error: ServiceError|null, responseMessage: news_news_pb.NewsResponse|null) => void
   ): UnaryResponse;
   listSections(
-    requestMessage: news_pb.ListSectionsRequest,
+    requestMessage: news_news_pb.ListSectionsRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: news_pb.SectionListResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: news_news_pb.SectionListResponse|null) => void
   ): UnaryResponse;
   listSections(
-    requestMessage: news_pb.ListSectionsRequest,
-    callback: (error: ServiceError|null, responseMessage: news_pb.SectionListResponse|null) => void
+    requestMessage: news_news_pb.ListSectionsRequest,
+    callback: (error: ServiceError|null, responseMessage: news_news_pb.SectionListResponse|null) => void
   ): UnaryResponse;
 }
 

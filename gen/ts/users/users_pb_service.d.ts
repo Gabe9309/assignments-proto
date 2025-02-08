@@ -1,7 +1,7 @@
 // package: users
-// file: user.proto
+// file: users/users.proto
 
-import * as user_pb from "./user_pb";
+import * as users_users_pb from "../users/users_pb";
 import {grpc} from "@improbable-eng/grpc-web";
 
 type UserRegServiceSignup = {
@@ -9,8 +9,8 @@ type UserRegServiceSignup = {
   readonly service: typeof UserRegService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof user_pb.SignupRequest;
-  readonly responseType: typeof user_pb.SignupResponse;
+  readonly requestType: typeof users_users_pb.SignupRequest;
+  readonly responseType: typeof users_users_pb.SignupResponse;
 };
 
 type UserRegServiceLogin = {
@@ -18,8 +18,8 @@ type UserRegServiceLogin = {
   readonly service: typeof UserRegService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof user_pb.LoginRequest;
-  readonly responseType: typeof user_pb.LoginResponse;
+  readonly requestType: typeof users_users_pb.LoginRequest;
+  readonly responseType: typeof users_users_pb.LoginResponse;
 };
 
 export class UserRegService {
@@ -33,8 +33,8 @@ type UserServiceGetUser = {
   readonly service: typeof UserService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof user_pb.GetUserRequest;
-  readonly responseType: typeof user_pb.GetUserResponse;
+  readonly requestType: typeof users_users_pb.GetUserRequest;
+  readonly responseType: typeof users_users_pb.GetUserResponse;
 };
 
 type UserServiceUpdateUser = {
@@ -42,8 +42,8 @@ type UserServiceUpdateUser = {
   readonly service: typeof UserService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof user_pb.UpdateUserRequest;
-  readonly responseType: typeof user_pb.UpdateUserResponse;
+  readonly requestType: typeof users_users_pb.UpdateUserRequest;
+  readonly responseType: typeof users_users_pb.UpdateUserResponse;
 };
 
 type UserServiceDeleteUser = {
@@ -51,8 +51,8 @@ type UserServiceDeleteUser = {
   readonly service: typeof UserService;
   readonly requestStream: false;
   readonly responseStream: false;
-  readonly requestType: typeof user_pb.DeleteUserRequest;
-  readonly responseType: typeof user_pb.DeleteUserResponse;
+  readonly requestType: typeof users_users_pb.DeleteUserRequest;
+  readonly responseType: typeof users_users_pb.DeleteUserResponse;
 };
 
 export class UserService {
@@ -95,22 +95,22 @@ export class UserRegServiceClient {
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);
   signup(
-    requestMessage: user_pb.SignupRequest,
+    requestMessage: users_users_pb.SignupRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: user_pb.SignupResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.SignupResponse|null) => void
   ): UnaryResponse;
   signup(
-    requestMessage: user_pb.SignupRequest,
-    callback: (error: ServiceError|null, responseMessage: user_pb.SignupResponse|null) => void
+    requestMessage: users_users_pb.SignupRequest,
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.SignupResponse|null) => void
   ): UnaryResponse;
   login(
-    requestMessage: user_pb.LoginRequest,
+    requestMessage: users_users_pb.LoginRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: user_pb.LoginResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.LoginResponse|null) => void
   ): UnaryResponse;
   login(
-    requestMessage: user_pb.LoginRequest,
-    callback: (error: ServiceError|null, responseMessage: user_pb.LoginResponse|null) => void
+    requestMessage: users_users_pb.LoginRequest,
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.LoginResponse|null) => void
   ): UnaryResponse;
 }
 
@@ -119,31 +119,31 @@ export class UserServiceClient {
 
   constructor(serviceHost: string, options?: grpc.RpcOptions);
   getUser(
-    requestMessage: user_pb.GetUserRequest,
+    requestMessage: users_users_pb.GetUserRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: user_pb.GetUserResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.GetUserResponse|null) => void
   ): UnaryResponse;
   getUser(
-    requestMessage: user_pb.GetUserRequest,
-    callback: (error: ServiceError|null, responseMessage: user_pb.GetUserResponse|null) => void
+    requestMessage: users_users_pb.GetUserRequest,
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.GetUserResponse|null) => void
   ): UnaryResponse;
   updateUser(
-    requestMessage: user_pb.UpdateUserRequest,
+    requestMessage: users_users_pb.UpdateUserRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: user_pb.UpdateUserResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.UpdateUserResponse|null) => void
   ): UnaryResponse;
   updateUser(
-    requestMessage: user_pb.UpdateUserRequest,
-    callback: (error: ServiceError|null, responseMessage: user_pb.UpdateUserResponse|null) => void
+    requestMessage: users_users_pb.UpdateUserRequest,
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.UpdateUserResponse|null) => void
   ): UnaryResponse;
   deleteUser(
-    requestMessage: user_pb.DeleteUserRequest,
+    requestMessage: users_users_pb.DeleteUserRequest,
     metadata: grpc.Metadata,
-    callback: (error: ServiceError|null, responseMessage: user_pb.DeleteUserResponse|null) => void
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.DeleteUserResponse|null) => void
   ): UnaryResponse;
   deleteUser(
-    requestMessage: user_pb.DeleteUserRequest,
-    callback: (error: ServiceError|null, responseMessage: user_pb.DeleteUserResponse|null) => void
+    requestMessage: users_users_pb.DeleteUserRequest,
+    callback: (error: ServiceError|null, responseMessage: users_users_pb.DeleteUserResponse|null) => void
   ): UnaryResponse;
 }
 

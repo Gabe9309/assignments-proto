@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.19.1
-// source: user.proto
+// source: users/users.proto
 
 package users
 
@@ -137,7 +137,7 @@ var UserRegService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "user.proto",
+	Metadata: "users/users.proto",
 }
 
 // UserServiceClient is the client API for UserService service.
@@ -295,5 +295,5 @@ var UserService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "user.proto",
+	Metadata: "users/users.proto",
 }

@@ -1,4 +1,4 @@
-// source: news.proto
+// source: news/news.proto
 /**
  * @fileoverview
  * @enhanceable
