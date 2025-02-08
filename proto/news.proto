@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package news;
+
+option go_package = "pb/news";
+
+
+message UpdateNewsPreferencesRequest {
+  string userId = 1;
+  repeated string interestedSections = 2;
+}
+
+message NewsRequest {
+  string userId = 1;
+}
+
+message NewsResponse {
+  repeated Article results = 1;
+}
+
+message Article {
+  string section = 1;
+  string subSection = 2;
+  string title = 3;
+  string abstract = 4;
+  string url = 5;
+  string source = 6;
+}
+
+message SectionListResponse {
+  repeated SectionResponse results = 1;
+}
+
+message SectionResponse {
+  string section = 1;
+  string displayName = 2;
+}
+
+message ListSectionsRequest {
+  string userId = 1;
+}
+
+service NewsService {
+  rpc GetNewsFeed(NewsRequest) returns (NewsResponse);
+  rpc ListSections(ListSectionsRequest) returns (SectionListResponse);
+}

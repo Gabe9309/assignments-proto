@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+package users;
+
+option go_package = "/pb/users";
+
+
+message User {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  repeated string newsPreferences = 4;
+}
+
+message SignupRequest {
+  string name = 1;
+  string email = 2;
+  string password = 3;
+}
+
+message SignupResponse {
+  User user = 1;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  string token = 1;
+}
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+message DeleteUserRequest {
+  string id = 1;
+}
+
+message UpdateUserRequest {
+  string id = 1;
+  User user = 2;
+}
+
+message UpdateUserResponse {
+  bool updated = 1;
+}
+
+message DeleteUserResponse {
+  bool deleted = 1;
+}
+
+
+// Public services
+service UserRegService {
+  rpc Signup(SignupRequest) returns (SignupResponse);
+  rpc Login(LoginRequest) returns (LoginResponse);
+}
+
+// Protected services
+service UserService {
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+  rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+  rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+}
