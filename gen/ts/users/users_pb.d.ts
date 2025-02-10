@@ -115,6 +115,9 @@ export class LoginResponse extends jspb.Message {
   getToken(): string;
   setToken(value: string): void;
 
+  getUserid(): string;
+  setUserid(value: string): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): LoginResponse.AsObject;
   static toObject(includeInstance: boolean, msg: LoginResponse): LoginResponse.AsObject;
@@ -128,6 +131,7 @@ export class LoginResponse extends jspb.Message {
 export namespace LoginResponse {
   export type AsObject = {
     token: string,
+    userid: string,
   }
 }
 

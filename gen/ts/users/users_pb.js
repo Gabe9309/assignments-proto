@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-var jspb = require('google-protobuf');
+import jspb, { Message, BinaryReader, BinaryWriter } from 'google-protobuf';
 var goog = jspb;
 var global = (function() {
   if (this) { return this; }
@@ -43,9 +43,9 @@ goog.exportSymbol('proto.users.User', null, global);
  * @constructor
  */
 proto.users.User = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.users.User.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.users.User.repeatedFields_, null);
 };
-goog.inherits(proto.users.User, jspb.Message);
+goog.inherits(proto.users.User, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -64,9 +64,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.SignupRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.SignupRequest, jspb.Message);
+goog.inherits(proto.users.SignupRequest, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -85,9 +85,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.SignupResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.SignupResponse, jspb.Message);
+goog.inherits(proto.users.SignupResponse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -106,9 +106,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.LoginRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.LoginRequest, jspb.Message);
+goog.inherits(proto.users.LoginRequest, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -127,9 +127,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.LoginResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.LoginResponse, jspb.Message);
+goog.inherits(proto.users.LoginResponse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -148,9 +148,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.GetUserRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.GetUserRequest, jspb.Message);
+goog.inherits(proto.users.GetUserRequest, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -169,9 +169,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.GetUserResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.GetUserResponse, jspb.Message);
+goog.inherits(proto.users.GetUserResponse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -190,9 +190,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.DeleteUserRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.DeleteUserRequest, jspb.Message);
+goog.inherits(proto.users.DeleteUserRequest, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -211,9 +211,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.UpdateUserRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.UpdateUserRequest, jspb.Message);
+goog.inherits(proto.users.UpdateUserRequest, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -232,9 +232,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.UpdateUserResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.UpdateUserResponse, jspb.Message);
+goog.inherits(proto.users.UpdateUserResponse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -253,9 +253,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.users.DeleteUserResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.users.DeleteUserResponse, jspb.Message);
+goog.inherits(proto.users.DeleteUserResponse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -273,7 +273,7 @@ proto.users.User.repeatedFields_ = [4];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -302,10 +302,10 @@ proto.users.User.prototype.toObject = function(opt_includeInstance) {
  */
 proto.users.User.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    email: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    newspreferencesList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f
+    id: Message.getFieldWithDefault(msg, 1, ""),
+    name: Message.getFieldWithDefault(msg, 2, ""),
+    email: Message.getFieldWithDefault(msg, 3, ""),
+    newspreferencesList: (f = Message.getRepeatedField(msg, 4)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -322,7 +322,7 @@ proto.users.User.toObject = function(includeInstance, msg) {
  * @return {!proto.users.User}
  */
 proto.users.User.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.User;
   return proto.users.User.deserializeBinaryFromReader(msg, reader);
 };
@@ -372,7 +372,7 @@ proto.users.User.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.users.User.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.User.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -423,7 +423,7 @@ proto.users.User.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.users.User.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -432,7 +432,7 @@ proto.users.User.prototype.getId = function() {
  * @return {!proto.users.User} returns this
  */
 proto.users.User.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -441,7 +441,7 @@ proto.users.User.prototype.setId = function(value) {
  * @return {string}
  */
 proto.users.User.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -450,7 +450,7 @@ proto.users.User.prototype.getName = function() {
  * @return {!proto.users.User} returns this
  */
 proto.users.User.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -459,7 +459,7 @@ proto.users.User.prototype.setName = function(value) {
  * @return {string}
  */
 proto.users.User.prototype.getEmail = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -468,7 +468,7 @@ proto.users.User.prototype.getEmail = function() {
  * @return {!proto.users.User} returns this
  */
 proto.users.User.prototype.setEmail = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -477,7 +477,7 @@ proto.users.User.prototype.setEmail = function(value) {
  * @return {!Array<string>}
  */
 proto.users.User.prototype.getNewspreferencesList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
+  return /** @type {!Array<string>} */ (Message.getRepeatedField(this, 4));
 };
 
 
@@ -486,7 +486,7 @@ proto.users.User.prototype.getNewspreferencesList = function() {
  * @return {!proto.users.User} returns this
  */
 proto.users.User.prototype.setNewspreferencesList = function(value) {
-  return jspb.Message.setField(this, 4, value || []);
+  return Message.setField(this, 4, value || []);
 };
 
 
@@ -496,7 +496,7 @@ proto.users.User.prototype.setNewspreferencesList = function(value) {
  * @return {!proto.users.User} returns this
  */
 proto.users.User.prototype.addNewspreferences = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+  return Message.addToRepeatedField(this, 4, value, opt_index);
 };
 
 
@@ -512,7 +512,7 @@ proto.users.User.prototype.clearNewspreferencesList = function() {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -541,9 +541,9 @@ proto.users.SignupRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.users.SignupRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    email: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    password: jspb.Message.getFieldWithDefault(msg, 3, "")
+    name: Message.getFieldWithDefault(msg, 1, ""),
+    email: Message.getFieldWithDefault(msg, 2, ""),
+    password: Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -560,7 +560,7 @@ proto.users.SignupRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.users.SignupRequest}
  */
 proto.users.SignupRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.SignupRequest;
   return proto.users.SignupRequest.deserializeBinaryFromReader(msg, reader);
 };
@@ -606,7 +606,7 @@ proto.users.SignupRequest.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.users.SignupRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.SignupRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -650,7 +650,7 @@ proto.users.SignupRequest.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.users.SignupRequest.prototype.getName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -659,7 +659,7 @@ proto.users.SignupRequest.prototype.getName = function() {
  * @return {!proto.users.SignupRequest} returns this
  */
 proto.users.SignupRequest.prototype.setName = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -668,7 +668,7 @@ proto.users.SignupRequest.prototype.setName = function(value) {
  * @return {string}
  */
 proto.users.SignupRequest.prototype.getEmail = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -677,7 +677,7 @@ proto.users.SignupRequest.prototype.getEmail = function() {
  * @return {!proto.users.SignupRequest} returns this
  */
 proto.users.SignupRequest.prototype.setEmail = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -686,7 +686,7 @@ proto.users.SignupRequest.prototype.setEmail = function(value) {
  * @return {string}
  */
 proto.users.SignupRequest.prototype.getPassword = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -695,14 +695,14 @@ proto.users.SignupRequest.prototype.getPassword = function() {
  * @return {!proto.users.SignupRequest} returns this
  */
 proto.users.SignupRequest.prototype.setPassword = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return Message.setProto3StringField(this, 3, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -748,7 +748,7 @@ proto.users.SignupResponse.toObject = function(includeInstance, msg) {
  * @return {!proto.users.SignupResponse}
  */
 proto.users.SignupResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.SignupResponse;
   return proto.users.SignupResponse.deserializeBinaryFromReader(msg, reader);
 };
@@ -787,7 +787,7 @@ proto.users.SignupResponse.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.users.SignupResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.SignupResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -819,7 +819,7 @@ proto.users.SignupResponse.serializeBinaryToWriter = function(message, writer) {
  */
 proto.users.SignupResponse.prototype.getUser = function() {
   return /** @type{?proto.users.User} */ (
-    jspb.Message.getWrapperField(this, proto.users.User, 1));
+    Message.getWrapperField(this, proto.users.User, 1));
 };
 
 
@@ -828,7 +828,7 @@ proto.users.SignupResponse.prototype.getUser = function() {
  * @return {!proto.users.SignupResponse} returns this
 */
 proto.users.SignupResponse.prototype.setUser = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+  return Message.setWrapperField(this, 1, value);
 };
 
 
@@ -846,14 +846,14 @@ proto.users.SignupResponse.prototype.clearUser = function() {
  * @return {boolean}
  */
 proto.users.SignupResponse.prototype.hasUser = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -882,8 +882,8 @@ proto.users.LoginRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.users.LoginRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    email: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    password: jspb.Message.getFieldWithDefault(msg, 2, "")
+    email: Message.getFieldWithDefault(msg, 1, ""),
+    password: Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -900,7 +900,7 @@ proto.users.LoginRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.users.LoginRequest}
  */
 proto.users.LoginRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.LoginRequest;
   return proto.users.LoginRequest.deserializeBinaryFromReader(msg, reader);
 };
@@ -942,7 +942,7 @@ proto.users.LoginRequest.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.users.LoginRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.LoginRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -979,7 +979,7 @@ proto.users.LoginRequest.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.users.LoginRequest.prototype.getEmail = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -988,7 +988,7 @@ proto.users.LoginRequest.prototype.getEmail = function() {
  * @return {!proto.users.LoginRequest} returns this
  */
 proto.users.LoginRequest.prototype.setEmail = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -997,7 +997,7 @@ proto.users.LoginRequest.prototype.setEmail = function(value) {
  * @return {string}
  */
 proto.users.LoginRequest.prototype.getPassword = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -1006,14 +1006,14 @@ proto.users.LoginRequest.prototype.getPassword = function() {
  * @return {!proto.users.LoginRequest} returns this
  */
 proto.users.LoginRequest.prototype.setPassword = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1042,7 +1042,8 @@ proto.users.LoginResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.users.LoginResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    token: jspb.Message.getFieldWithDefault(msg, 1, "")
+    token: Message.getFieldWithDefault(msg, 1, ""),
+    userid: Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -1059,7 +1060,7 @@ proto.users.LoginResponse.toObject = function(includeInstance, msg) {
  * @return {!proto.users.LoginResponse}
  */
 proto.users.LoginResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.LoginResponse;
   return proto.users.LoginResponse.deserializeBinaryFromReader(msg, reader);
 };
@@ -1083,6 +1084,10 @@ proto.users.LoginResponse.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setToken(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUserid(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1097,7 +1102,7 @@ proto.users.LoginResponse.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.users.LoginResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.LoginResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1119,6 +1124,13 @@ proto.users.LoginResponse.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
+  f = message.getUserid();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -1127,7 +1139,7 @@ proto.users.LoginResponse.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.users.LoginResponse.prototype.getToken = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -1136,14 +1148,32 @@ proto.users.LoginResponse.prototype.getToken = function() {
  * @return {!proto.users.LoginResponse} returns this
  */
 proto.users.LoginResponse.prototype.setToken = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string userid = 2;
+ * @return {string}
+ */
+proto.users.LoginResponse.prototype.getUserid = function() {
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.users.LoginResponse} returns this
+ */
+proto.users.LoginResponse.prototype.setUserid = function(value) {
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1172,7 +1202,7 @@ proto.users.GetUserRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.users.GetUserRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, "")
+    id: Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -1189,7 +1219,7 @@ proto.users.GetUserRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.users.GetUserRequest}
  */
 proto.users.GetUserRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.GetUserRequest;
   return proto.users.GetUserRequest.deserializeBinaryFromReader(msg, reader);
 };
@@ -1227,7 +1257,7 @@ proto.users.GetUserRequest.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.users.GetUserRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.GetUserRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1257,7 +1287,7 @@ proto.users.GetUserRequest.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.users.GetUserRequest.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -1266,14 +1296,14 @@ proto.users.GetUserRequest.prototype.getId = function() {
  * @return {!proto.users.GetUserRequest} returns this
  */
 proto.users.GetUserRequest.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1319,7 +1349,7 @@ proto.users.GetUserResponse.toObject = function(includeInstance, msg) {
  * @return {!proto.users.GetUserResponse}
  */
 proto.users.GetUserResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.GetUserResponse;
   return proto.users.GetUserResponse.deserializeBinaryFromReader(msg, reader);
 };
@@ -1358,7 +1388,7 @@ proto.users.GetUserResponse.deserializeBinaryFromReader = function(msg, reader) 
  * @return {!Uint8Array}
  */
 proto.users.GetUserResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.GetUserResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1390,7 +1420,7 @@ proto.users.GetUserResponse.serializeBinaryToWriter = function(message, writer) 
  */
 proto.users.GetUserResponse.prototype.getUser = function() {
   return /** @type{?proto.users.User} */ (
-    jspb.Message.getWrapperField(this, proto.users.User, 1));
+    Message.getWrapperField(this, proto.users.User, 1));
 };
 
 
@@ -1399,7 +1429,7 @@ proto.users.GetUserResponse.prototype.getUser = function() {
  * @return {!proto.users.GetUserResponse} returns this
 */
 proto.users.GetUserResponse.prototype.setUser = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+  return Message.setWrapperField(this, 1, value);
 };
 
 
@@ -1417,14 +1447,14 @@ proto.users.GetUserResponse.prototype.clearUser = function() {
  * @return {boolean}
  */
 proto.users.GetUserResponse.prototype.hasUser = function() {
-  return jspb.Message.getField(this, 1) != null;
+  return Message.getField(this, 1) != null;
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1453,7 +1483,7 @@ proto.users.DeleteUserRequest.prototype.toObject = function(opt_includeInstance)
  */
 proto.users.DeleteUserRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, "")
+    id: Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -1470,7 +1500,7 @@ proto.users.DeleteUserRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.users.DeleteUserRequest}
  */
 proto.users.DeleteUserRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.DeleteUserRequest;
   return proto.users.DeleteUserRequest.deserializeBinaryFromReader(msg, reader);
 };
@@ -1508,7 +1538,7 @@ proto.users.DeleteUserRequest.deserializeBinaryFromReader = function(msg, reader
  * @return {!Uint8Array}
  */
 proto.users.DeleteUserRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.DeleteUserRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1538,7 +1568,7 @@ proto.users.DeleteUserRequest.serializeBinaryToWriter = function(message, writer
  * @return {string}
  */
 proto.users.DeleteUserRequest.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -1547,14 +1577,14 @@ proto.users.DeleteUserRequest.prototype.getId = function() {
  * @return {!proto.users.DeleteUserRequest} returns this
  */
 proto.users.DeleteUserRequest.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1583,7 +1613,7 @@ proto.users.UpdateUserRequest.prototype.toObject = function(opt_includeInstance)
  */
 proto.users.UpdateUserRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    id: Message.getFieldWithDefault(msg, 1, ""),
     user: (f = msg.getUser()) && proto.users.User.toObject(includeInstance, f)
   };
 
@@ -1601,7 +1631,7 @@ proto.users.UpdateUserRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.users.UpdateUserRequest}
  */
 proto.users.UpdateUserRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.UpdateUserRequest;
   return proto.users.UpdateUserRequest.deserializeBinaryFromReader(msg, reader);
 };
@@ -1644,7 +1674,7 @@ proto.users.UpdateUserRequest.deserializeBinaryFromReader = function(msg, reader
  * @return {!Uint8Array}
  */
 proto.users.UpdateUserRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.UpdateUserRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1682,7 +1712,7 @@ proto.users.UpdateUserRequest.serializeBinaryToWriter = function(message, writer
  * @return {string}
  */
 proto.users.UpdateUserRequest.prototype.getId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -1691,7 +1721,7 @@ proto.users.UpdateUserRequest.prototype.getId = function() {
  * @return {!proto.users.UpdateUserRequest} returns this
  */
 proto.users.UpdateUserRequest.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1701,7 +1731,7 @@ proto.users.UpdateUserRequest.prototype.setId = function(value) {
  */
 proto.users.UpdateUserRequest.prototype.getUser = function() {
   return /** @type{?proto.users.User} */ (
-    jspb.Message.getWrapperField(this, proto.users.User, 2));
+    Message.getWrapperField(this, proto.users.User, 2));
 };
 
 
@@ -1710,7 +1740,7 @@ proto.users.UpdateUserRequest.prototype.getUser = function() {
  * @return {!proto.users.UpdateUserRequest} returns this
 */
 proto.users.UpdateUserRequest.prototype.setUser = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
+  return Message.setWrapperField(this, 2, value);
 };
 
 
@@ -1728,14 +1758,14 @@ proto.users.UpdateUserRequest.prototype.clearUser = function() {
  * @return {boolean}
  */
 proto.users.UpdateUserRequest.prototype.hasUser = function() {
-  return jspb.Message.getField(this, 2) != null;
+  return Message.getField(this, 2) != null;
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1764,7 +1794,7 @@ proto.users.UpdateUserResponse.prototype.toObject = function(opt_includeInstance
  */
 proto.users.UpdateUserResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    updated: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    updated: Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -1781,7 +1811,7 @@ proto.users.UpdateUserResponse.toObject = function(includeInstance, msg) {
  * @return {!proto.users.UpdateUserResponse}
  */
 proto.users.UpdateUserResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.UpdateUserResponse;
   return proto.users.UpdateUserResponse.deserializeBinaryFromReader(msg, reader);
 };
@@ -1819,7 +1849,7 @@ proto.users.UpdateUserResponse.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.users.UpdateUserResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.UpdateUserResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1849,7 +1879,7 @@ proto.users.UpdateUserResponse.serializeBinaryToWriter = function(message, write
  * @return {boolean}
  */
 proto.users.UpdateUserResponse.prototype.getUpdated = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 1, false));
 };
 
 
@@ -1858,14 +1888,14 @@ proto.users.UpdateUserResponse.prototype.getUpdated = function() {
  * @return {!proto.users.UpdateUserResponse} returns this
  */
 proto.users.UpdateUserResponse.prototype.setUpdated = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
+  return Message.setProto3BooleanField(this, 1, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1894,7 +1924,7 @@ proto.users.DeleteUserResponse.prototype.toObject = function(opt_includeInstance
  */
 proto.users.DeleteUserResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    deleted: jspb.Message.getBooleanFieldWithDefault(msg, 1, false)
+    deleted: Message.getBooleanFieldWithDefault(msg, 1, false)
   };
 
   if (includeInstance) {
@@ -1911,7 +1941,7 @@ proto.users.DeleteUserResponse.toObject = function(includeInstance, msg) {
  * @return {!proto.users.DeleteUserResponse}
  */
 proto.users.DeleteUserResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.users.DeleteUserResponse;
   return proto.users.DeleteUserResponse.deserializeBinaryFromReader(msg, reader);
 };
@@ -1949,7 +1979,7 @@ proto.users.DeleteUserResponse.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.users.DeleteUserResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.users.DeleteUserResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1979,7 +2009,7 @@ proto.users.DeleteUserResponse.serializeBinaryToWriter = function(message, write
  * @return {boolean}
  */
 proto.users.DeleteUserResponse.prototype.getDeleted = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 1, false));
+  return /** @type {boolean} */ (Message.getBooleanFieldWithDefault(this, 1, false));
 };
 
 
@@ -1988,7 +2018,7 @@ proto.users.DeleteUserResponse.prototype.getDeleted = function() {
  * @return {!proto.users.DeleteUserResponse} returns this
  */
 proto.users.DeleteUserResponse.prototype.setDeleted = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 1, value);
+  return Message.setProto3BooleanField(this, 1, value);
 };
 
 

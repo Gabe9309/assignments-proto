@@ -1,8 +1,8 @@
 // package: users
 // file: users/users.proto
 
-var users_users_pb = require("../users/users_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+import { SignupRequest, SignupResponse, LoginRequest, LoginResponse, GetUserRequest, GetUserResponse, UpdateUserRequest, UpdateUserResponse, DeleteUserRequest, DeleteUserResponse } from "../users/users_pb";
+import { grpc } from "@improbable-eng/grpc-web";
 
 var UserRegService = (function () {
   function UserRegService() {}
@@ -15,8 +15,8 @@ UserRegService.Signup = {
   service: UserRegService,
   requestStream: false,
   responseStream: false,
-  requestType: users_users_pb.SignupRequest,
-  responseType: users_users_pb.SignupResponse
+  requestType: SignupRequest,
+  responseType: SignupResponse
 };
 
 UserRegService.Login = {
@@ -24,11 +24,12 @@ UserRegService.Login = {
   service: UserRegService,
   requestStream: false,
   responseStream: false,
-  requestType: users_users_pb.LoginRequest,
-  responseType: users_users_pb.LoginResponse
+  requestType: LoginRequest,
+  responseType: LoginResponse
 };
 
-exports.UserRegService = UserRegService;
+const _UserRegService = UserRegService;
+export { _UserRegService as UserRegService };
 
 function UserRegServiceClient(serviceHost, options) {
   this.serviceHost = serviceHost;
@@ -97,7 +98,8 @@ UserRegServiceClient.prototype.login = function login(requestMessage, metadata, 
   };
 };
 
-exports.UserRegServiceClient = UserRegServiceClient;
+const _UserRegServiceClient = UserRegServiceClient;
+export { _UserRegServiceClient as UserRegServiceClient };
 
 var UserService = (function () {
   function UserService() {}
@@ -110,8 +112,8 @@ UserService.GetUser = {
   service: UserService,
   requestStream: false,
   responseStream: false,
-  requestType: users_users_pb.GetUserRequest,
-  responseType: users_users_pb.GetUserResponse
+  requestType: GetUserRequest,
+  responseType: GetUserResponse
 };
 
 UserService.UpdateUser = {
@@ -119,8 +121,8 @@ UserService.UpdateUser = {
   service: UserService,
   requestStream: false,
   responseStream: false,
-  requestType: users_users_pb.UpdateUserRequest,
-  responseType: users_users_pb.UpdateUserResponse
+  requestType: UpdateUserRequest,
+  responseType: UpdateUserResponse
 };
 
 UserService.DeleteUser = {
@@ -128,11 +130,12 @@ UserService.DeleteUser = {
   service: UserService,
   requestStream: false,
   responseStream: false,
-  requestType: users_users_pb.DeleteUserRequest,
-  responseType: users_users_pb.DeleteUserResponse
+  requestType: DeleteUserRequest,
+  responseType: DeleteUserResponse
 };
 
-exports.UserService = UserService;
+const _UserService = UserService;
+export { _UserService as UserService };
 
 function UserServiceClient(serviceHost, options) {
   this.serviceHost = serviceHost;
@@ -232,5 +235,6 @@ UserServiceClient.prototype.deleteUser = function deleteUser(requestMessage, met
   };
 };
 
-exports.UserServiceClient = UserServiceClient;
+const _UserServiceClient = UserServiceClient;
+export { _UserServiceClient as UserServiceClient };
 

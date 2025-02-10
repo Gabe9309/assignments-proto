@@ -11,7 +11,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-var jspb = require('google-protobuf');
+import jspb, { Message, BinaryReader, BinaryWriter } from 'google-protobuf';
 var goog = jspb;
 var global = (function() {
   if (this) { return this; }
@@ -39,9 +39,9 @@ goog.exportSymbol('proto.news.UpdateNewsPreferencesRequest', null, global);
  * @constructor
  */
 proto.news.UpdateNewsPreferencesRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.news.UpdateNewsPreferencesRequest.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.news.UpdateNewsPreferencesRequest.repeatedFields_, null);
 };
-goog.inherits(proto.news.UpdateNewsPreferencesRequest, jspb.Message);
+goog.inherits(proto.news.UpdateNewsPreferencesRequest, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -60,9 +60,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.news.NewsRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.news.NewsRequest, jspb.Message);
+goog.inherits(proto.news.NewsRequest, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -81,9 +81,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.news.NewsResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.news.NewsResponse.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.news.NewsResponse.repeatedFields_, null);
 };
-goog.inherits(proto.news.NewsResponse, jspb.Message);
+goog.inherits(proto.news.NewsResponse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -102,9 +102,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.news.Article = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.news.Article, jspb.Message);
+goog.inherits(proto.news.Article, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -123,9 +123,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.news.SectionListResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.news.SectionListResponse.repeatedFields_, null);
+  Message.initialize(this, opt_data, 0, -1, proto.news.SectionListResponse.repeatedFields_, null);
 };
-goog.inherits(proto.news.SectionListResponse, jspb.Message);
+goog.inherits(proto.news.SectionListResponse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -144,9 +144,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.news.SectionResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.news.SectionResponse, jspb.Message);
+goog.inherits(proto.news.SectionResponse, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -165,9 +165,9 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.news.ListSectionsRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.news.ListSectionsRequest, jspb.Message);
+goog.inherits(proto.news.ListSectionsRequest, Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
@@ -185,7 +185,7 @@ proto.news.UpdateNewsPreferencesRequest.repeatedFields_ = [2];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -214,8 +214,8 @@ proto.news.UpdateNewsPreferencesRequest.prototype.toObject = function(opt_includ
  */
 proto.news.UpdateNewsPreferencesRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    userid: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    interestedsectionsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
+    userid: Message.getFieldWithDefault(msg, 1, ""),
+    interestedsectionsList: (f = Message.getRepeatedField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -232,7 +232,7 @@ proto.news.UpdateNewsPreferencesRequest.toObject = function(includeInstance, msg
  * @return {!proto.news.UpdateNewsPreferencesRequest}
  */
 proto.news.UpdateNewsPreferencesRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.news.UpdateNewsPreferencesRequest;
   return proto.news.UpdateNewsPreferencesRequest.deserializeBinaryFromReader(msg, reader);
 };
@@ -274,7 +274,7 @@ proto.news.UpdateNewsPreferencesRequest.deserializeBinaryFromReader = function(m
  * @return {!Uint8Array}
  */
 proto.news.UpdateNewsPreferencesRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.news.UpdateNewsPreferencesRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -311,7 +311,7 @@ proto.news.UpdateNewsPreferencesRequest.serializeBinaryToWriter = function(messa
  * @return {string}
  */
 proto.news.UpdateNewsPreferencesRequest.prototype.getUserid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -320,7 +320,7 @@ proto.news.UpdateNewsPreferencesRequest.prototype.getUserid = function() {
  * @return {!proto.news.UpdateNewsPreferencesRequest} returns this
  */
 proto.news.UpdateNewsPreferencesRequest.prototype.setUserid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -329,7 +329,7 @@ proto.news.UpdateNewsPreferencesRequest.prototype.setUserid = function(value) {
  * @return {!Array<string>}
  */
 proto.news.UpdateNewsPreferencesRequest.prototype.getInterestedsectionsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+  return /** @type {!Array<string>} */ (Message.getRepeatedField(this, 2));
 };
 
 
@@ -338,7 +338,7 @@ proto.news.UpdateNewsPreferencesRequest.prototype.getInterestedsectionsList = fu
  * @return {!proto.news.UpdateNewsPreferencesRequest} returns this
  */
 proto.news.UpdateNewsPreferencesRequest.prototype.setInterestedsectionsList = function(value) {
-  return jspb.Message.setField(this, 2, value || []);
+  return Message.setField(this, 2, value || []);
 };
 
 
@@ -348,7 +348,7 @@ proto.news.UpdateNewsPreferencesRequest.prototype.setInterestedsectionsList = fu
  * @return {!proto.news.UpdateNewsPreferencesRequest} returns this
  */
 proto.news.UpdateNewsPreferencesRequest.prototype.addInterestedsections = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+  return Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
 
@@ -364,7 +364,7 @@ proto.news.UpdateNewsPreferencesRequest.prototype.clearInterestedsectionsList = 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -393,7 +393,7 @@ proto.news.NewsRequest.prototype.toObject = function(opt_includeInstance) {
  */
 proto.news.NewsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    userid: jspb.Message.getFieldWithDefault(msg, 1, "")
+    userid: Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -410,7 +410,7 @@ proto.news.NewsRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.news.NewsRequest}
  */
 proto.news.NewsRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.news.NewsRequest;
   return proto.news.NewsRequest.deserializeBinaryFromReader(msg, reader);
 };
@@ -448,7 +448,7 @@ proto.news.NewsRequest.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.news.NewsRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.news.NewsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -478,7 +478,7 @@ proto.news.NewsRequest.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.news.NewsRequest.prototype.getUserid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -487,7 +487,7 @@ proto.news.NewsRequest.prototype.getUserid = function() {
  * @return {!proto.news.NewsRequest} returns this
  */
 proto.news.NewsRequest.prototype.setUserid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -501,7 +501,7 @@ proto.news.NewsResponse.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -530,7 +530,7 @@ proto.news.NewsResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.news.NewsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    resultsList: jspb.Message.toObjectList(msg.getResultsList(),
+    resultsList: Message.toObjectList(msg.getResultsList(),
     proto.news.Article.toObject, includeInstance)
   };
 
@@ -548,7 +548,7 @@ proto.news.NewsResponse.toObject = function(includeInstance, msg) {
  * @return {!proto.news.NewsResponse}
  */
 proto.news.NewsResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.news.NewsResponse;
   return proto.news.NewsResponse.deserializeBinaryFromReader(msg, reader);
 };
@@ -587,7 +587,7 @@ proto.news.NewsResponse.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.news.NewsResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.news.NewsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -619,7 +619,7 @@ proto.news.NewsResponse.serializeBinaryToWriter = function(message, writer) {
  */
 proto.news.NewsResponse.prototype.getResultsList = function() {
   return /** @type{!Array<!proto.news.Article>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.news.Article, 1));
+    Message.getRepeatedWrapperField(this, proto.news.Article, 1));
 };
 
 
@@ -628,7 +628,7 @@ proto.news.NewsResponse.prototype.getResultsList = function() {
  * @return {!proto.news.NewsResponse} returns this
 */
 proto.news.NewsResponse.prototype.setResultsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -638,7 +638,7 @@ proto.news.NewsResponse.prototype.setResultsList = function(value) {
  * @return {!proto.news.Article}
  */
 proto.news.NewsResponse.prototype.addResults = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.news.Article, opt_index);
+  return Message.addToRepeatedWrapperField(this, 1, opt_value, proto.news.Article, opt_index);
 };
 
 
@@ -654,7 +654,7 @@ proto.news.NewsResponse.prototype.clearResultsList = function() {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -683,12 +683,12 @@ proto.news.Article.prototype.toObject = function(opt_includeInstance) {
  */
 proto.news.Article.toObject = function(includeInstance, msg) {
   var f, obj = {
-    section: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    subsection: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    title: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    pb_abstract: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    url: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    source: jspb.Message.getFieldWithDefault(msg, 6, "")
+    section: Message.getFieldWithDefault(msg, 1, ""),
+    subsection: Message.getFieldWithDefault(msg, 2, ""),
+    title: Message.getFieldWithDefault(msg, 3, ""),
+    pb_abstract: Message.getFieldWithDefault(msg, 4, ""),
+    url: Message.getFieldWithDefault(msg, 5, ""),
+    source: Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -705,7 +705,7 @@ proto.news.Article.toObject = function(includeInstance, msg) {
  * @return {!proto.news.Article}
  */
 proto.news.Article.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.news.Article;
   return proto.news.Article.deserializeBinaryFromReader(msg, reader);
 };
@@ -763,7 +763,7 @@ proto.news.Article.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.news.Article.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.news.Article.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -828,7 +828,7 @@ proto.news.Article.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.news.Article.prototype.getSection = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -837,7 +837,7 @@ proto.news.Article.prototype.getSection = function() {
  * @return {!proto.news.Article} returns this
  */
 proto.news.Article.prototype.setSection = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -846,7 +846,7 @@ proto.news.Article.prototype.setSection = function(value) {
  * @return {string}
  */
 proto.news.Article.prototype.getSubsection = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -855,7 +855,7 @@ proto.news.Article.prototype.getSubsection = function() {
  * @return {!proto.news.Article} returns this
  */
 proto.news.Article.prototype.setSubsection = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -864,7 +864,7 @@ proto.news.Article.prototype.setSubsection = function(value) {
  * @return {string}
  */
 proto.news.Article.prototype.getTitle = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 3, ""));
 };
 
 
@@ -873,7 +873,7 @@ proto.news.Article.prototype.getTitle = function() {
  * @return {!proto.news.Article} returns this
  */
 proto.news.Article.prototype.setTitle = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
+  return Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -882,7 +882,7 @@ proto.news.Article.prototype.setTitle = function(value) {
  * @return {string}
  */
 proto.news.Article.prototype.getAbstract = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 4, ""));
 };
 
 
@@ -891,7 +891,7 @@ proto.news.Article.prototype.getAbstract = function() {
  * @return {!proto.news.Article} returns this
  */
 proto.news.Article.prototype.setAbstract = function(value) {
-  return jspb.Message.setProto3StringField(this, 4, value);
+  return Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -900,7 +900,7 @@ proto.news.Article.prototype.setAbstract = function(value) {
  * @return {string}
  */
 proto.news.Article.prototype.getUrl = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 5, ""));
 };
 
 
@@ -909,7 +909,7 @@ proto.news.Article.prototype.getUrl = function() {
  * @return {!proto.news.Article} returns this
  */
 proto.news.Article.prototype.setUrl = function(value) {
-  return jspb.Message.setProto3StringField(this, 5, value);
+  return Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -918,7 +918,7 @@ proto.news.Article.prototype.setUrl = function(value) {
  * @return {string}
  */
 proto.news.Article.prototype.getSource = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 6, ""));
 };
 
 
@@ -927,7 +927,7 @@ proto.news.Article.prototype.getSource = function() {
  * @return {!proto.news.Article} returns this
  */
 proto.news.Article.prototype.setSource = function(value) {
-  return jspb.Message.setProto3StringField(this, 6, value);
+  return Message.setProto3StringField(this, 6, value);
 };
 
 
@@ -941,7 +941,7 @@ proto.news.SectionListResponse.repeatedFields_ = [1];
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -970,7 +970,7 @@ proto.news.SectionListResponse.prototype.toObject = function(opt_includeInstance
  */
 proto.news.SectionListResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    resultsList: jspb.Message.toObjectList(msg.getResultsList(),
+    resultsList: Message.toObjectList(msg.getResultsList(),
     proto.news.SectionResponse.toObject, includeInstance)
   };
 
@@ -988,7 +988,7 @@ proto.news.SectionListResponse.toObject = function(includeInstance, msg) {
  * @return {!proto.news.SectionListResponse}
  */
 proto.news.SectionListResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.news.SectionListResponse;
   return proto.news.SectionListResponse.deserializeBinaryFromReader(msg, reader);
 };
@@ -1027,7 +1027,7 @@ proto.news.SectionListResponse.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.news.SectionListResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.news.SectionListResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1059,7 +1059,7 @@ proto.news.SectionListResponse.serializeBinaryToWriter = function(message, write
  */
 proto.news.SectionListResponse.prototype.getResultsList = function() {
   return /** @type{!Array<!proto.news.SectionResponse>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.news.SectionResponse, 1));
+    Message.getRepeatedWrapperField(this, proto.news.SectionResponse, 1));
 };
 
 
@@ -1068,7 +1068,7 @@ proto.news.SectionListResponse.prototype.getResultsList = function() {
  * @return {!proto.news.SectionListResponse} returns this
 */
 proto.news.SectionListResponse.prototype.setResultsList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+  return Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
@@ -1078,7 +1078,7 @@ proto.news.SectionListResponse.prototype.setResultsList = function(value) {
  * @return {!proto.news.SectionResponse}
  */
 proto.news.SectionListResponse.prototype.addResults = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.news.SectionResponse, opt_index);
+  return Message.addToRepeatedWrapperField(this, 1, opt_value, proto.news.SectionResponse, opt_index);
 };
 
 
@@ -1094,7 +1094,7 @@ proto.news.SectionListResponse.prototype.clearResultsList = function() {
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1123,8 +1123,8 @@ proto.news.SectionResponse.prototype.toObject = function(opt_includeInstance) {
  */
 proto.news.SectionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    section: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    displayname: jspb.Message.getFieldWithDefault(msg, 2, "")
+    section: Message.getFieldWithDefault(msg, 1, ""),
+    displayname: Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -1141,7 +1141,7 @@ proto.news.SectionResponse.toObject = function(includeInstance, msg) {
  * @return {!proto.news.SectionResponse}
  */
 proto.news.SectionResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.news.SectionResponse;
   return proto.news.SectionResponse.deserializeBinaryFromReader(msg, reader);
 };
@@ -1183,7 +1183,7 @@ proto.news.SectionResponse.deserializeBinaryFromReader = function(msg, reader) {
  * @return {!Uint8Array}
  */
 proto.news.SectionResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.news.SectionResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1220,7 +1220,7 @@ proto.news.SectionResponse.serializeBinaryToWriter = function(message, writer) {
  * @return {string}
  */
 proto.news.SectionResponse.prototype.getSection = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -1229,7 +1229,7 @@ proto.news.SectionResponse.prototype.getSection = function() {
  * @return {!proto.news.SectionResponse} returns this
  */
 proto.news.SectionResponse.prototype.setSection = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1238,7 +1238,7 @@ proto.news.SectionResponse.prototype.setSection = function(value) {
  * @return {string}
  */
 proto.news.SectionResponse.prototype.getDisplayname = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 2, ""));
 };
 
 
@@ -1247,14 +1247,14 @@ proto.news.SectionResponse.prototype.getDisplayname = function() {
  * @return {!proto.news.SectionResponse} returns this
  */
 proto.news.SectionResponse.prototype.setDisplayname = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  return Message.setProto3StringField(this, 2, value);
 };
 
 
 
 
 
-if (jspb.Message.GENERATE_TO_OBJECT) {
+if (Message.GENERATE_TO_OBJECT) {
 /**
  * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
@@ -1283,7 +1283,7 @@ proto.news.ListSectionsRequest.prototype.toObject = function(opt_includeInstance
  */
 proto.news.ListSectionsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    userid: jspb.Message.getFieldWithDefault(msg, 1, "")
+    userid: Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -1300,7 +1300,7 @@ proto.news.ListSectionsRequest.toObject = function(includeInstance, msg) {
  * @return {!proto.news.ListSectionsRequest}
  */
 proto.news.ListSectionsRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
+  var reader = new BinaryReader(bytes);
   var msg = new proto.news.ListSectionsRequest;
   return proto.news.ListSectionsRequest.deserializeBinaryFromReader(msg, reader);
 };
@@ -1338,7 +1338,7 @@ proto.news.ListSectionsRequest.deserializeBinaryFromReader = function(msg, reade
  * @return {!Uint8Array}
  */
 proto.news.ListSectionsRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
+  var writer = new BinaryWriter();
   proto.news.ListSectionsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
@@ -1368,7 +1368,7 @@ proto.news.ListSectionsRequest.serializeBinaryToWriter = function(message, write
  * @return {string}
  */
 proto.news.ListSectionsRequest.prototype.getUserid = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {string} */ (Message.getFieldWithDefault(this, 1, ""));
 };
 
 
@@ -1377,7 +1377,7 @@ proto.news.ListSectionsRequest.prototype.getUserid = function() {
  * @return {!proto.news.ListSectionsRequest} returns this
  */
 proto.news.ListSectionsRequest.prototype.setUserid = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  return Message.setProto3StringField(this, 1, value);
 };
 
 

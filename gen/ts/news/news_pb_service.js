@@ -1,8 +1,8 @@
 // package: news
 // file: news/news.proto
 
-var news_news_pb = require("../news/news_pb");
-var grpc = require("@improbable-eng/grpc-web").grpc;
+import { NewsRequest, NewsResponse, ListSectionsRequest, SectionListResponse } from "../news/news_pb";
+import { grpc } from "@improbable-eng/grpc-web";
 
 var NewsService = (function () {
   function NewsService() {}
@@ -15,8 +15,8 @@ NewsService.GetNewsFeed = {
   service: NewsService,
   requestStream: false,
   responseStream: false,
-  requestType: news_news_pb.NewsRequest,
-  responseType: news_news_pb.NewsResponse
+  requestType: NewsRequest,
+  responseType: NewsResponse
 };
 
 NewsService.ListSections = {
@@ -24,11 +24,12 @@ NewsService.ListSections = {
   service: NewsService,
   requestStream: false,
   responseStream: false,
-  requestType: news_news_pb.ListSectionsRequest,
-  responseType: news_news_pb.SectionListResponse
+  requestType: ListSectionsRequest,
+  responseType: SectionListResponse
 };
 
-exports.NewsService = NewsService;
+const _NewsService = NewsService;
+export { _NewsService as NewsService };
 
 function NewsServiceClient(serviceHost, options) {
   this.serviceHost = serviceHost;
@@ -97,5 +98,6 @@ NewsServiceClient.prototype.listSections = function listSections(requestMessage,
   };
 };
 
-exports.NewsServiceClient = NewsServiceClient;
+const _NewsServiceClient = NewsServiceClient;
+export { _NewsServiceClient as NewsServiceClient };
 
